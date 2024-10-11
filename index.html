@@ -80,8 +80,8 @@
             <div class="row">
                 <div class="col-12 col-md-8 col-xl-9 wow bounceIn" data-wow-delay=".3s">
                     <h2 class="h3 text-center text-md-left font-weight-bold">Agencia de programación de aplicaciones</h2>
-                    <p>NETWORK te asesora en el desarrollo y el diseño para que tu Aplicación Movil salga a la luz. Ponemos a tu disposición las mejores plataformas del mundo de las telecomunicaciones.</p>
-                    <p>Ponemos a tu alcance un servicio adaptado a tus necesidades, desde una consultoría integral con supervisión de todos y cada uno de los pasos que has de seguir para crear un negocio actual (comunicación, diseño corporativo, tecnologías...)
+                    <p id="texto-agencia">NETWORK te asesora en el desarrollo y el diseño para que tu Aplicación Movil salga a la luz. Ponemos a tu disposición las mejores plataformas del mundo de las telecomunicaciones.</p>
+                    <p id="texto-agencia">Ponemos a tu alcance un servicio adaptado a tus necesidades, desde una consultoría integral con supervisión de todos y cada uno de los pasos que has de seguir para crear un negocio actual (comunicación, diseño corporativo, tecnologías...)
                         a productos adaptados a metodologías ágiles de creación de apps diseñadas por nosotros y avaladas por nuestros años de experiencia.</p>
                 </div>
                 <div class="col-12 col-md-4 col-xl-3 wow bounceIn" data-wow-delay=".6s">
@@ -273,6 +273,21 @@
     titulo.addEventListener('click', () => {
         titulo.style.color = 'blue';
     });
+    </script>
+    <script>
+        const imagenAgencia = document.querySelector('.col-12.col-md-4.col-xl-3 img');
+    const textoAgencia = document.getElementById('texto-agencia');
+
+    // Evento para cambiar el texto al pasar el mouse sobre la imagen
+    imagenAgencia.addEventListener('mouseenter', () => {
+        textoAgencia.textContent = '¡Bienvenido a nuestra agencia!';
+    });
+
+    // Evento para restaurar el texto al quitar el mouse de la imagen
+    imagenAgencia.addEventListener('mouseleave', () => {
+        textoAgencia.textContent = 'NETWORK te asesora en el desarrollo y el diseño para que tu Aplicación Movil salga a la luz. Ponemos a tu disposición las mejores plataformas del mundo de las telecomunicaciones.';
+    });
+    </script>
 </script>
 </body>
 
