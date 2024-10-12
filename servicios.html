@@ -204,7 +204,6 @@
     <script src="js/sitio.js"></script>
     <script>
     document.getElementById('agregar-servicio').addEventListener('click', function() {
-        // Crear un nuevo elemento div para el servicio
         const nuevoServicio = document.createElement('div');
         nuevoServicio.className = 'col-md-4';
         nuevoServicio.innerHTML = `
@@ -214,7 +213,6 @@
             </article>
         `;
         
-        // Agregar el nuevo servicio al contenedor de servicios
         document.getElementById('servicios').appendChild(nuevoServicio);
     });
 </script>
