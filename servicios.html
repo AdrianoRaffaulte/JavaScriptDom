@@ -64,6 +64,10 @@
             </div>
         </div>
     </section>
+    <!-- Botón para agregar servicio -->
+    <div class="text-center mb-4">
+        <button id="agregar-servicio" class="btn btn-success">Agregar Servicio</button>
+    </div>
     <section class="ruta py-1">
         <div class="container">
             <div class="row">
@@ -77,7 +81,7 @@
     <!--Lista de servicios-->
     <main class="py-1 lista-servicios">
         <div class="container">
-            <div class="row">
+            <div class="row" id="servicios">
                 <div class="col-md-4">
                     <article class="item-servicios">
                         <i class="fa fa-bullseye" aria-hidden="true"></i>
@@ -198,6 +202,23 @@
     <script src="js/wow.min.js"></script>
     <script src="js/smooth-scroll.min.js"></script>
     <script src="js/sitio.js"></script>
+    <script>
+    document.getElementById('agregar-servicio').addEventListener('click', function() {
+        // Crear un nuevo elemento div para el servicio
+        const nuevoServicio = document.createElement('div');
+        nuevoServicio.className = 'col-md-4';
+        nuevoServicio.innerHTML = `
+            <article class="item-servicios">
+                <h4>Nuevo Servicio</h4>
+                <p>Este es un nuevo servicio por el boton.</p>
+            </article>
+        `;
+        
+        // Agregar el nuevo servicio al contenedor de servicios
+        document.getElementById('servicios').appendChild(nuevoServicio);
+    });
+</script>
+
 </body>
 
 </html>
