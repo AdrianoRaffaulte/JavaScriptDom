@@ -232,16 +232,33 @@
         <div class="container">
             <p>2017 © NETWORK Todos los derechos reservados</p>
             <button id="callFunctionButton">Fábrica de software</button>
-
+            <button id="searchButton">Buscar</button>
             <script>
-                // Al hacer clic en el botón
+                document.getElementById('searchButton').addEventListener('click', function() {
+            const input = document.getElementById('searchInput').value;
+            const resultDiv = document.getElementById('result');
+
+            try {
+                // Intentamos convertir el valor a número
+                const number = parseFloat(input);
+
+
+                if (isNaN(number)) {
+                    throw new Error('El valor ingresado no es un número válido.');
+                }
+
+                resultDiv.textContent = `Número ingresado: ${number}`;
+            } catch (error) {
+                resultDiv.textContent = `Error: ${error.message}`;
+            }
+        });
+            </script>
+            <script>
                 document.getElementById('callFunctionButton').addEventListener('click', function() {
                     try {
-                        // Intentamos llamar a una función que no está definida
                         nonExistentFunction(); // Esta función no está definida
                     } catch (error) {
-                        // Manejo del error
-                        console.error('Error: La función no existe'); // Mensaje personalizado
+                        console.error('Error: La función no existe');
                     }
                 });
             </script>
