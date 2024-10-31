@@ -231,6 +231,20 @@
     <footer class="piedepagina" role="contentinfo">
         <div class="container">
             <p>2017 © NETWORK Todos los derechos reservados</p>
+            <button id="callFunctionButton">Fábrica de software</button>
+
+            <script>
+                // Al hacer clic en el botón
+                document.getElementById('callFunctionButton').addEventListener('click', function() {
+                    try {
+                        // Intentamos llamar a una función que no está definida
+                        nonExistentFunction(); // Esta función no está definida
+                    } catch (error) {
+                        // Manejo del error
+                        console.error('Error: La función no existe'); // Mensaje personalizado
+                    }
+                });
+            </script>
             <ul class="redes-sociales">
                 <li><a href="#"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
