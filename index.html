@@ -25,6 +25,17 @@
 </head>
 
 <body>
+    <script>
+        try {
+            // Intentamos acceder a un elemento con un id inexistente
+            const elementoInexistente = document.getElementById("elementoNoExiste");
+            // Intentamos usar el elemento como si existiera
+            console.log(elementoInexistente.innerHTML);
+        } catch (error) {
+            // Si ocurre un error, mostramos el mensaje en la consola
+            console.error("Error: El elemento no existe en el DOM.", error);
+        }
+    </script>
     <!--Menu superior-->
     <section class="bienvenidos">
         <header class="encabezado fixed-top" role="banner" id="encabezado">
